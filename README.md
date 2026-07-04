@@ -544,11 +544,8 @@ npm run preview
 
 **Sabbella Vigneswara Reddy**
 
-- GitHub: https://github.com/yourusername
+- GitHub: https://github.com/vigneswarareddysabbella/
 - LinkedIn: https://www.linkedin.com/in/vigneswara-reddy-sabbella-bb7588262/
 
 ---
 
-# 📄 License
-
-This project is licensed under the MIT License.
