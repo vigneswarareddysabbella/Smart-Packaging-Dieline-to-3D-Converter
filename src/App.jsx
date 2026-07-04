@@ -1,33 +1,27 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Grid } from "@react-three/drei";
-
-function Cube() {
-  return (
-    <mesh>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color="orange" />
-    </mesh>
-  );
-}
+import Header from "./components/Layout/Header";
+import Sidebar from "./components/Layout/Sidebar";
+import StatusBar from "./components/Layout/StatusBar";
+import Viewer from "./components/Viewer/Viewer";
 
 export default function App() {
   return (
     <div
       style={{
-        width: "100vw",
+        display: "flex",
+        flexDirection: "column",
         height: "100vh",
+        fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        color: "#0f172a",
       }}
     >
-      <Canvas camera={{ position: [5, 5, 5] }}>
-        <ambientLight intensity={2} />
-        <directionalLight position={[10, 10, 10]} />
-
-        <Cube />
-
-        <Grid />
-
-        <OrbitControls />
-      </Canvas>
+      <Header />
+      <main style={{ flex: 1, display: "flex", minHeight: 0 }}>
+        <Sidebar />
+        <section style={{ flex: 1, minWidth: 0 }}>
+          <Viewer />
+        </section>
+      </main>
+      <StatusBar />
     </div>
   );
 }
